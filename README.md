@@ -1,6 +1,6 @@
 # shopping-cart
 
-## [Live Demo](https://francogodina.github.io/shoppingcart/)
+## [Live Demo](https://francogodina.github.io/shopping-cart/)
 
 
 ### Description
