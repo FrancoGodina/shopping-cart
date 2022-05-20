@@ -8,7 +8,6 @@ function Header() {
                 <Link to="/shop">Shop</Link>
                 <Link to="/cart">Cart</Link>
                 <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
             </nav>
             <Outlet />
         </div>
