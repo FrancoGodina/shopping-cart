@@ -66,6 +66,7 @@
 
 .totalPrice {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     padding-left: 20px;
     padding-top: 20px;
@@ -93,4 +94,23 @@
 
 .clearCartButton:hover {
     background-color: rgb(214, 37, 37);
+}
+
+.checkout {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #2937ff;
+    height: 60px;
+    width: 100px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout:hover {
+    background-color: #184dfa;
 }

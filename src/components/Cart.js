@@ -1,4 +1,5 @@
 import "./css/cart.css"
+import { Link } from "react-router-dom"
 
 function Cart(props) {
 
@@ -52,6 +53,8 @@ function Cart(props) {
 
             <div className="totalPrice">
                 Total price: ${totalPrice}
+                {props.cartItems.length >=1 && (
+                    <Link to="/" className="checkout">Checkout</Link>)}
             </div>
         </div>
     )
