@@ -47,7 +47,7 @@ function App() {
     }
 
     return(
-      <BrowserRouter>
+      <BrowserRouter basename="/shoppingcart">
         <Routes>
           <Route path="/" element={<Header cartItems={cartItems}/>}>
             <Route index element={
