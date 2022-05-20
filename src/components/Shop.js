@@ -1,6 +1,5 @@
 import data from "./data"
 import ShopCard from "./ShopCard"
-import { Link } from "react-router-dom";
 import "./css/shop.css"
 
 function Shop (props) {
