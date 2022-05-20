@@ -1,0 +1,42 @@
+.card {
+    width: 300px;
+    height: 370px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    margin: 40px 20px;
+}
+
+.imgContainer {
+    width: 100%;
+    max-width: 300px;
+    min-height: 280px;
+    max-height: 280px;
+    display: block;
+    object-fit: cover;
+}
+
+.imgName {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.addButton {
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.addButton:hover {
+    background-color: #f44336;
+    color: black;
+}

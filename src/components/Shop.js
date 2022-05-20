@@ -1,15 +1,13 @@
 import data from "./data"
 import ShopCard from "./ShopCard"
 import { Link } from "react-router-dom";
+import "./css/shop.css"
 
 function Shop (props) {
 
     const {dataItems} = data;
     return(
         <div className="shop">
-            <div className="itemNumber">
-                <Link to="/cart"> Cart:{props.cartItems.length}</Link>
-            </div>
             <div className="shopContainer">
                 {dataItems.map((wear, index) => {
                     return(

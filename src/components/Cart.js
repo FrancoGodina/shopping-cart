@@ -1,3 +1,5 @@
+import "./css/cart.css"
+
 function Cart(props) {
 
     const totalPrice = props.cartItems.reduce(
@@ -10,7 +12,7 @@ function Cart(props) {
             <div className="cartHeader">Cart Items</div>
             <div className="clearCart">
                 {props.cartItems.length >=1 && (
-                    <button onClick={props.handleCartClear}>CLEAR CART</button>
+                    <button className="clearCartButton" onClick={props.handleCartClear}>CLEAR CART</button>
                 )}
             </div>
 
@@ -18,15 +20,16 @@ function Cart(props) {
                 <div className="cartEmpty"> No items added yet. </div>
             )}
 
-            <div>
+            <div >
                 {props.cartItems.map((item) => (
-                    <div key={item.id}>
-                        <img 
-                            src={item.img} 
+                    <div key={item.id} className="cartItemList">
+                        <img
+                            className="cartItemImg"
+                            src={item.image} 
                             alt={item.name} 
                         />
-                        <div>{item.quantity} x {item.name}</div>
-                        <div className="cartItemsFunction">
+                        <div className="cartItemName">{item.quantity} x {item.name}</div>
+                        <div className="cartItemFunction">
                             <button 
                                 className="minusButton"
                                 onClick={() => props.handleRemoveItem(item)}

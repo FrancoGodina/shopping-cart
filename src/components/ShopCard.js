@@ -1,19 +1,20 @@
 import React from "react";
+import "./css/shopCard.css";
 
-function ClothesCard(props) {
+function ShopCard(props) {
     return(
         <div className="card">
-            <div className="img-container">
-                <img alt={props.name} src={props.image}/>
+            <div >
+                <img className="imgContainer" alt={props.name} src={props.image}/>
             </div>
-            <div className="img-name">
+            <div className="imgName">
                 ${props.price} - {props.name}
             </div>
             <div>
-                <button type="submit" onClick={() => (props.handleClick(props))}>ADD TO CART</button>
+                <button class="addButton" type="submit" onClick={() => (props.handleClick(props))}>ADD TO CART</button>
             </div>
         </div>
     )
 }
 
-export default ClothesCard;
+export default ShopCard;

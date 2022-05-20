@@ -1,13 +1,14 @@
 import { Outlet, Link } from "react-router-dom"
+import "./css/header.css"
 
-function Header() {
+function Header(props) {
     return(
         <div>
-            <Link to="/" className="page-title"><h1>FAKE SHOP</h1> </Link>
-            <nav className="navbar">
+            <nav className="header">
+                <Link to="/" className="page-title"><h1>FAKE SHOP</h1> </Link>
                 <Link to="/shop">Shop</Link>
-                <Link to="/cart">Cart</Link>
-                <Link to="/about">About</Link>
+                <Link to="/cart">Cart:{props.cartItems.length}</Link>
+
             </nav>
             <Outlet />
         </div>

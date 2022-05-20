@@ -1,10 +1,9 @@
 import "./App.css";
 import { useState } from "react";
-import { BrowserRouter,  Routes, Route } from "react-router-dom";
+import { BrowserRouter,  Routes, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
-import About from "./components/About";
 
 function App() {
 
@@ -50,14 +49,17 @@ function App() {
     return(
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Header />}>
+          <Route path="/" element={<Header cartItems={cartItems}/>}>
             <Route index element={
-              <main className="index"><p>We are all about fashion.</p></main>
+              <div className="index">
+                <p>We are all about fashion.</p>
+                <br></br>
+                <Link to="/shop" className="shopButton">Shop now</Link>
+              </div>
             }
             />
             <Route path="/shop" element={<Shop handleClick={handleAddItem} cartItems={cartItems} />} />
             <Route path="/cart" element={<Cart cartItems={cartItems} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} handleCartClear={handleCartClear} />} />
-            <Route path="/about" element={<About />} />
             <Route path="*" element={<main style={{padding: "1rem"}}> 
                                       <p>There's nothing to see here. </p>  
                                     </main>} 
